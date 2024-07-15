@@ -90,8 +90,8 @@ if st.button("Recommend me"):
         styled_description_df = pd.DataFrame({'Description': [recommended_info['Description']]}).style.set_properties(**{'color': 'yellow'}, subset=['Description'])
         st.table(styled_description_df)
 
-        st.markdown("<h3 style='color: skyblue;'>Avoid Things 🚫</h3>", unsafe_allow_html=True)
-        st.table(pd.DataFrame({'Avoid doing': recommended_info['Precautions']}))
+        st.markdown("<h3 style='color: skyblue;'>Things to do</h3>", unsafe_allow_html=True)
+        st.table(pd.DataFrame({'Start doing': recommended_info['Precautions']}))
 
         st.markdown("<h3 style='color: skyblue;'>Medications 💊</h3>", unsafe_allow_html=True)
         st.table(pd.DataFrame({'Medications': recommended_info['Medications']}))
